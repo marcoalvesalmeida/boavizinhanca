@@ -69,7 +69,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div id="container">
 	<h1>Boa Vizinhança, CodeIgniter</h1>
-
+        <div class="body">
+            <h2><?php echo "<pre>"; print_r($resultado); echo "</pre>";?></h2>
+        </div>
 	<p class="footer">A página foi carregada em <strong>{elapsed_time}</strong> segundos. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
