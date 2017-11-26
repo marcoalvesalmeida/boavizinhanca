@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Boa Vizinhança</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<nav  id="menu"  class="navbar navbar-default navbar-fixed-top menu">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand logo" id="logo" href="#">
+					Boa Vizinhança
+				</a>
+				<ul class="nav navbar-nav menu-links">
+					<li><a href="#">DENUNCIAR</a></li>
+					<li><a href="#">SOBRE</a></li>
+					<li><a href="#">LOCAIS</a></li>
+					<li><a href="#">CONTATO</a></li>
+				</div>
+			</nav>
+			<section class="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 col-lg-12 header-content">
+							<h1 id="title" class="title text-center">BOA VIZINHANÇA</h1>
+							<h2 class="subtitle text-center">Em busca de uma cidade melhor.</h2>
+							<button class="btn btn-warning text-center btn-lg denunciar">
+								Denuncie
+							</button>
+						</div>	
+					</div>			
+				</div>
+
+			</section>
+			<script type="text/javascript" src="js/bootstrap.js"></script>
+			<script>	
+				function menu(){
+					if(document.body.scrollTop>97){
+						document.getElementById('menu').style.background="#222222";
+						document.getElementById('logo').style.fontSize="21px";
+					}else{
+						document.getElementById('menu').style.background="transparent";
+						document.getElementById('logo').style.fontSize="28px";
+					}
+				}
+				window.addEventListener('scroll',menu, false);
+			</script>
+		</body>
+		</html>
