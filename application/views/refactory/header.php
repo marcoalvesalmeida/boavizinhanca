@@ -31,9 +31,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="opcoes-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="<?php echo base_url('/')?>">HOME</a></li>
-                            <li><a href="#">LOCAIS</a></li>
-                            <li><a href="#">SOBRE</a></li>
-                            <li><a href="#">CONTATO</a></li>
+                            <li><a href="<?php echo base_url('ocorrencia')?>">LOCAIS</a></li>
+                            <li><a href="<?php echo base_url('/#sobre')?>">SOBRE</a></li>
+                            <li><a href="<?php echo base_url('/#contato')?>">CONTATO</a></li>
+                            <li><a href="<?php echo base_url('/usuario/admin')?>">ADMIN</a></li>
                         </ul>
                     </div>
                 </div>
