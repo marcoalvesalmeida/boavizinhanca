@@ -87,5 +87,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </table>
 </div>
 </div>
-</body>
-</html>
+<?php
+$this->load->view('refactory/footer.php');
+?>

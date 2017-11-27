@@ -18,9 +18,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </footer>
-<script type="text/javascript" src="../../bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="../../bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../bootstrap/js/npm.js"></script>
-<script src="https://use.fontawesome.com/913fcc4808.js"></script>
 </body>
 </html>
