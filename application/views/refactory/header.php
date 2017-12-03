@@ -9,7 +9,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="<?php echo base_url('bootstrap/js/jquery.js')?>"></script>
+        <script>
+            $(document).ready(function(){
+                $("#title").mouseenter(function(){
+                    $(this).animate({opacity:'0.6' });
+                    $(this).css('color','#E2C503')
+                });
+                $("#title").mouseleave(function(){
+                    $(this).animate({opacity:'1' });
+                    $(this).css('color','#FFF')
+                });
+                $("#sair").mouseleave(function(){
+                    alert("Ei! Não seja mal, fique com a gente!");
+                });
+            });
+        </script>
         <script type="text/javascript" src="../../../bootstrap/js/bootstrap.js"></script>
         <script src="https://use.fontawesome.com/913fcc4808.js"></script>
     </head>
@@ -37,9 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="<?php echo base_url('/') ?>">HOME</a></li>
                             <li><a href="<?php echo base_url('ocorrencia') ?>">LOCAIS</a></li>
-                            <li><a href="<?php echo base_url('/#sobre') ?>">SOBRE</a></li>
-                            <li><a href="<?php echo base_url('/#contato') ?>">CONTATO</a></li>
-                            <li><a href="<?php echo base_url('/usuario/admin') ?>">ADMIN</a></li>
+                            <li><a href="<?php echo base_url('/#about') ?>">SOBRE</a></li>
+                            <li><a href="<?php echo base_url('/#contact') ?>">CONTATO</a></li>
+                            <li id="sair"><a href="<?php echo base_url('/usuario/admin') ?>">ADMIN</a></li>
                         </ul>
                     </div>
                 </div>

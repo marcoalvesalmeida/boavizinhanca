@@ -11,13 +11,13 @@ class Mensagem extends CI_Controller {
         $this->load->model('Mensagem_model','mensagens');
         $dados['nome'] = $this->input->post('nome');
         $dados['email'] = $this->input->post('email');
-        $dados['assunto'] = $this->input->post('assunto');
+        $dados['assunto'] = "Contato pelo site";
         $dados['mensagem'] = $this->input->post('mensagem');
         date_default_timezone_set('America/Sao_Paulo');
         $dados['data_hora'] = date('Y-m-d H:i');
         $dados['status_mensagem']=false;
         $resultado = $this->mensagens->salvar($dados);
-        redirect('http://localhost/boavizinhanca/boavizinhanca');
+        redirect('/');
     }
 
     public function pageCadastrar(){

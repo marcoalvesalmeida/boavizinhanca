@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat');
 html{
 	position: relative;
-    min-height: 100%;
+	min-height: 100%;
 }
 body{
 	margin: 0 0 60px;
@@ -12,10 +12,11 @@ body{
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
+	/*background-attachment: fixed;*/
 	color: #FFF;
+	margin-top: -100px;
 	padding-top: 300px;
 	padding-bottom: 300px;
-	margin-bottom: 300px;
 }
 .title{
 	font-family: Montserrat;
@@ -31,6 +32,16 @@ body{
 	line-height: 40px;
 	color:#f0f8ff;
 }
+.img-site{
+	background-image: url('../img/content.jpg');
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #FFF;
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
 .denunciar{
 	margin-top: 50px;
 	width: 150px;
@@ -38,7 +49,7 @@ body{
 }
 .menu{
 	width: 100%;
-	height: 70px;
+	height: 60px;
 	position: fixed;
 }
 .logo{
@@ -47,11 +58,11 @@ body{
 }
 
 .menu-links{
-	margin-left: 100%;
-	margin-top: -50px;
+	margin-left: 700px;
+	margin-top: 50px;
 	font-family: Montserrat;
-	font-size: 14px;
-	font-weight: 400px;
+	font-size: 70px;
+	font-weight: 400;
 	line-height: 20px;
 }
 .pages{
@@ -60,6 +71,8 @@ body{
 .navbar-pages{
 	background-color: #222222;
 	font-family: Montserrat;
+	height: 70px;
+	position: relative;
 }
 .form-cadastro{
 	margin-top: 50px;
@@ -71,10 +84,10 @@ body{
 	padding-top: 13px;
 }
 footer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 60px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 60px;
 }
 
 .btn-cadastro{
@@ -88,33 +101,252 @@ footer{
 	margin-left: 10px;
 }
 .bo{
-    padding:7px;
+	padding:7px;
 }
 .erro{
-    display: none;
+	display: none;
+}
+
+/* ABOUT SECTION */
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 2px;
+  background-color: #f1f1f1;
+  left: 40px;
+  margin-left: -1.5px;
+}
+.timeline > li {
+  margin-bottom: 50px;
+  position: relative;
+  min-height: 50px;
+}
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li .timeline-panel {
+  width: 100%;
+  float: right;
+  padding: 0 20px 0 100px;
+  position: relative;
+  text-align: left;
+}
+.timeline > li .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline > li .timeline-image {
+  left: 0;
+  margin-left: 0;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 100;
+  background-color: #696969;
+  color: white;
+  border-radius: 100%;
+  border: 7px solid #f1f1f1;
+  text-align: center;
+}
+.timeline > li .timeline-image h4 {
+  font-size: 10px;
+  margin-top: 12px;
+  line-height: 14px;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  text-align: left;
+  padding: 0 20px 0 100px;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+.timeline .timeline-heading h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline .timeline-heading h4.subheading {
+  text-transform: none;
+}
+.timeline .timeline-body > p,
+.timeline .timeline-body > ul {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline > li {
+    margin-bottom: 100px;
+    min-height: 100px;
+  }
+  .timeline > li .timeline-panel {
+    width: 41%;
+    float: left;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+  .timeline > li .timeline-image {
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    margin-left: -50px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 13px;
+    margin-top: 16px;
+    line-height: 18px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    text-align: left;
+    padding: 0 30px 20px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .timeline > li {
+    min-height: 150px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px;
+  }
+  .timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 26px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px 100px;
+  }
+  .timeline > li .timeline-image {
+    width: 170px;
+    height: 170px;
+    margin-left: -85px;
+  }
+  .timeline > li .timeline-image h4 {
+    margin-top: 40px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 100px 20px 20px;
+  }
+}
+section {
+  padding: 100px 0;
+}
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section h3.section-subheading {
+  color: #FFF;
+  font-size: 20px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+}
+
+/*/* FIM SECTION TIMELINE **/
+
+/* SECTION CONTACT */
+.contact{
+	background-image: url('../img/footer.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
+	padding-top: 150px;
+	padding-bottom: 50px;
+	color: #000;
+	font-family: Montserrat;
+}
+
+.form-control-inverse{
+	background-color: lightgray;
+	color: #000;
+}
+
+#layer_1{
+
 }
 
 @media (min-width: 768px) and (max-width: 2000px) {
-    .menu-links{
-    	margin-left: 30%;
-    }
-    .header-content{
-    	margin-top: -100px;
-    }
-    .title{
-        font-size:75px;
-    }
-    .denunciar{
-    	margin-left: 44%;
-    }
+	.menu-links{
+		margin-left: 30%;
+	}
+	.header-content{
+		margin-top: -100px;
+	}
+	.title{
+		font-size:75px;
+	}
+	.denunciar{
+		margin-left: 44%;
+	}
 }
 
 @media (max-width: 768px) {
-     .title{
-        font-size:50px;
-    }
-    .denunciar{
-    	margin-left: 33%;
-    }
+	.title{
+		font-size:50px;
+	}
+	.denunciar{
+		margin-left: 33%;
+	}
 }
 
