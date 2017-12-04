@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <title>Boa Vizinhança</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="<?php echo base_url('bootstrap/js/parallax.js') ?>"></script>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
         <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
         <script src="<?php echo base_url('bootstrap/js/jquery.js')?>"></script>
@@ -29,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="https://use.fontawesome.com/913fcc4808.js"></script>
     </head>
     <body class="pages">
-        <nav class="navbar navbar-default navbar-pages">
+        <nav class="navbar navbar-default navbar-pages navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">

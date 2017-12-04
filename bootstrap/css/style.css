@@ -64,6 +64,7 @@ body{
 	font-size: 70px;
 	font-weight: 400;
 	line-height: 20px;
+	position: fixed;
 }
 .pages{
 	background-color: #eeeeee;
@@ -300,6 +301,16 @@ section h3.section-subheading {
 .service-heading {
   margin: 15px 0;
   text-transform: none;
+}
+.anime {
+	opacity: 0;
+	transform: translate3d(-100px,0,0);
+	transition: .3s;
+}
+
+.anime-start {
+	opacity: 1;
+	transform: translate3d(0,0,0);
 }
 
 /*/* FIM SECTION TIMELINE **/

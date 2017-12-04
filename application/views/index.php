@@ -15,11 +15,11 @@ $this->load->view("refactory/header");
     </div>
 </section>
 <!-- About Section -->  
-<section id="about" class="img-site">
+<section class="img-site">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Sobre</h2>
+                <h2 class="section-heading" id="about" >Sobre</h2>
                 <h3 class="section-subheading text-muted">O que é o site "Boa Vizinhança"?</h3>
             </div>
         </div>
@@ -30,12 +30,12 @@ $this->load->view("refactory/header");
                         <div class="timeline-image">
                             <img class="img-circle img-responsive" src="<?php echo base_url('bootstrap/img/about/1.jpg')?>" alt="">
                         </div>
-                        <div class="timeline-panel">
+                        <div class="timeline-panel animes">
                             <div class="timeline-heading">
                                 <h4>O que é?</h4>
                                 <h4 class="subheading">Como Surgiu e para que serve?</h4>
                             </div>
-                            <div class="timeline-body">
+                            <div class="timeline-body animes">
                                 <p class="text-muted">O site "Boa Vizinhança", como o nome já sugere, nasceu de uma ideia vinculada a política da boa vizinhança, ou seja, de que cidadãos de bem possam utilizar a ferramenta com o objetivo de ajudar seus vizinhos, amigos, colegas e até mesmo desconhecidos!</p>
                             </div>
                         </div>
@@ -44,7 +44,7 @@ $this->load->view("refactory/header");
                         <div class="timeline-image">
                             <img class="img-circle img-responsive" src="<?php echo base_url('bootstrap/img/about/3.jpg')?>" alt="">
                         </div>
-                        <div class="timeline-panel">
+                        <div class="timeline-panel animes">
                             <div class="timeline-heading">
                                 <h4>Como?</h4>
                                 <h4 class="subheading">De que forma foi desenvolvido?</h4>
@@ -58,7 +58,7 @@ $this->load->view("refactory/header");
                         <div class="timeline-image">
                             <img class="img-circle img-responsive" src="<?php echo base_url('bootstrap/img/about/m.jpg')?>" alt="">
                         </div>
-                        <div class="timeline-panel">
+                        <div class="timeline-panel animes">
                             <div class="timeline-heading">
                                 <h4>Por quem?</h4>
                                 <h4 class="subheading">Quem Desenvolveu?</h4>
@@ -85,6 +85,7 @@ $this->load->view("refactory/header");
         <div class="container">
             <h1 class="text-center" id="contact">Fale conosco:</h1>
             <form action="<?php echo base_url("mensagem/salvar")?>" method="POST" class="form-horizontal form-cadastlro">
+                <div class="appear_element" data-vp-add-class="appear_visible animated fadeInLeft">
                 <div class="row text-center">
                     <div class="col-md-1 form-line">
                         <label for="nome" class="control-label">Nome:</label>
@@ -99,6 +100,7 @@ $this->load->view("refactory/header");
                         <input type="email" name="email" class="form-control form-control-inverse" required>
                     </div>                  
                 </div>
+                </div>
                 <div class="row text-center">
                     <div class="col-md-1 form-line">
                         <label for="mensagem" class="control-label">Mensagem:</label>
@@ -110,7 +112,7 @@ $this->load->view("refactory/header");
                 <div class="row form-line text-center btn-cadastro" id="layer_1">
                     <button type="submit" class="btn btn-default btn-right btn-cadastro-1">Enviar</button>
                     <button type="reset" class="btn btn-danger btn-right btn-cadastro-2">Limpar</button>
-                </div>
+                </div></div>
             </form>    
         </div>
     </section>
