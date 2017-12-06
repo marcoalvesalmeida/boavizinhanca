@@ -18,5 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </footer>
+<script src="<?php echo base_url('bootstrap/js/parallax.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('bootstrap/js/jquery-3.1.1.min.js');?>"></script>
+</section>
+<script type="text/javascript" src="<?php echo base_url('bootstrap/js/bootstrap.js');?>"></script>
 </body>
 </html>

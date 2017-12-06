@@ -3,30 +3,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Boa Vizinhança</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <script src="<?php echo base_url('bootstrap/js/parallax.js') ?>"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
-        <script src="<?php echo base_url('bootstrap/js/jquery.js')?>"></script>
-        <script>
-            $(document).ready(function(){
-                $("#title").mouseenter(function(){
-                    $(this).animate({opacity:'0.6' });
-                    $(this).css('color','#E2C503')
-                });
-                $("#title").mouseleave(function(){
-                    $(this).animate({opacity:'1' });
-                    $(this).css('color','#FFF')
-                });
-                $("#sair").mouseleave(function(){
-                    alert("Ei! Não seja mal, fique com a gente!");
-                });
+<head>
+    <title>Boa Vizinhança</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
+    <script type="text/javascript" src="<?php echo base_url('bootstrap/js/jquery-3.1.1.min.js');?>"></script>
+    <script>
+        $(document).ready(function(){
+            $("#title").mouseenter(function(){
+                $(this).animate({opacity:'0.6' });
+                $(this).css('color','#E2C503')
+            });
+            $("#title").mouseleave(function(){
+                $(this).animate({opacity:'1' });
+                $(this).css('color','#FFF')
+            });
+            $("#sair").mouseleave(function(){
+                alert("Ei! Não seja mal, fique com a gente!");
+            });
+        });
+        /*function menu(){
+            if (document.body.scrollTop > 97) {
+                document.getElementById('menu').style.background = "#222222";
+                document.getElementById('logo').style.fontSize = "21px";
+            } else {
+                document.getElementById('menu').style.background = "transparent";
+                document.getElementById('logo').style.fontSize = "28px";
+            }*/
+            $(function(){   
+                var nav = $('#menu'); 
+                $(window).scroll(function () { 
+                    if ($(this).scrollTop() > 150) { 
+                        nav.addClass("menuFixo"); 
+                        nav.addClass("navbar-pages");
+                        nav.addClass("menu-links");  
+                    } else { 
+                        nav.removeClass("menuFixo"); 
+                        nav.removeClass("navbar-pages");
+                    } 
+                });  
             });
         </script>
-        <script type="text/javascript" src="../../../bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="<?php echo base_url('bootstrap/js/bootstrap.js')?>"></script>
         <script src="https://use.fontawesome.com/913fcc4808.js"></script>
     </head>
     <body class="pages">
@@ -49,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="opcoes-menu">
+                    <div class="opcoes-menu" id="menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="<?php echo base_url('/') ?>">HOME</a></li>
                             <li><a href="<?php echo base_url('ocorrencia') ?>">LOCAIS</a></li>
