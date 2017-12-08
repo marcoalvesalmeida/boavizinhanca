@@ -84,7 +84,7 @@ $this->load->view("refactory/header");
         <section class="contact">
             <div class="container">
                 <h1 class="text-center" id="contact">Fale conosco:</h1>
-                <form action="<?php echo base_url("mensagem/salvar")?>" method="POST" class="form-horizontal form-cadastro">
+                <form action="" method="POST" class="form-horizontal form-cadastro" id="ajax_form">
                     <div class="row text-center">
                         <div class="col-md-1 form-line">
                             <label for="nome" class="control-label">Nome:</label>

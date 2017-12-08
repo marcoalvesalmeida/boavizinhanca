@@ -12,6 +12,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="text/javascript" src="<?php echo base_url('bootstrap/js/jquery-3.1.1.min.js');?>"></script>
     <script>
         $(document).ready(function(){
+            $('#ajax_form').submit(function(){
+                var dados = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo base_url('mensagem/salvar');?>",
+                    data: dados,
+                    success: function( data )
+                    {
+                        alert(data);
+                    }
+                });
+                return false;
+            });
+        });
+        $(document).ready(function(){
             $("#title").mouseenter(function(){
                 $(this).animate({opacity:'0.6' });
                 $(this).css('color','#E2C503')
@@ -35,10 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             $(function(){   
                 var nav = $('#menu'); 
                 $(window).scroll(function () { 
-                    if ($(this).scrollTop() > 150) { 
+                    if ($(this).scrollTop() > 250) { 
                         nav.addClass("menuFixo"); 
                         nav.addClass("navbar-pages");
-                        nav.addClass("menu-links");  
+                        nav.addClass("menu-links"); 
+                        $(".menuFixo").css("background-color","transparent");
                     } else { 
                         nav.removeClass("menuFixo"); 
                         nav.removeClass("navbar-pages");

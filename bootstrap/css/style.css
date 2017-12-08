@@ -14,7 +14,7 @@ body{
 	background-size: cover;
 	/*background-attachment: fixed;*/
 	color: #FFF;
-	margin-top: -100px;
+	margin-top: 60px;
 	padding-top: 300px;
 	padding-bottom: 300px;
 }
@@ -50,7 +50,7 @@ body{
 .menu{
 	width: 100%;
 	height: 60px;
-	background-color: #28282a;
+	background-color: transparent;
 }
 
 .logo{
@@ -61,7 +61,6 @@ body{
 }
 
 .menu-links{
-	margin-left: 30%;
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 400;
@@ -338,7 +337,7 @@ section h3.section-subheading {
 
 @media (min-width: 768px) and (max-width: 2000px) {
 	.menu-links{
-		margin-left: 30%;
+		margin-left: 62.9%;
 	}
 	.header-content{
 		margin-top: -100px;
