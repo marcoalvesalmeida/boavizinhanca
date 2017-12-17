@@ -10,7 +10,7 @@ class Ocorrencia_model extends CI_Model {
 
     public function salvar($dados=NULL){
         if($dados!=NULL){
-            $this->db->insert('ocorrencias',$dados);
+            $this->db->insert('locations',$dados);
             return 1;
         }else{
             return 0;

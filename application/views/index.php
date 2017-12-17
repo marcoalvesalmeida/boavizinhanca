@@ -15,11 +15,11 @@ $this->load->view("refactory/header");
         </div>
     </section>
     <!-- About Section -->  
-    <section class="img-site">
+    <section class="img-site" id="about" >
         <div class="container">
             <div class="row anime">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" id="about" >Sobre</h2>
+                    <h2 class="section-heading" >Sobre</h2>
                     <h3 class="section-subheading text-muted">O que é o site "Boa Vizinhança"?</h3>
                 </div>
             </div>

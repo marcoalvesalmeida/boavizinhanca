@@ -10,6 +10,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
     <script type="text/javascript" src="<?php echo base_url('bootstrap/js/jquery-3.1.1.min.js');?>"></script>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
+    <link href='<?php echo base_url("bootstrap/css/mapa.css")?>' type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDKHslmsBHG61bJEvzFFrgY4BY3rv-aOW0"></script>
+    <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery.min.js")?>'></script>
+    <script type="text/javascript" src='<?php echo base_url("bootstrap/js/mapa.js")?>'></script>
+    <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery-ui.custom.min.js")?>'></script>
     <script>
         $(document).ready(function(){
             $('#ajax_form').submit(function(){

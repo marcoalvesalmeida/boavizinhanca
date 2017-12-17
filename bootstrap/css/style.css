@@ -26,14 +26,14 @@ body{
 	color:#f0f8ff;
 }
 .subtitle{
-	font-family: "Kaushan Script", cursive;
+	font-family: Montserrat, cursive;
 	font-weight: 400;
 	font-style: normal;
 	line-height: 40px;
 	color:#f0f8ff;
 }
 .img-site{
-	background-image: url('../img/content.jpg');
+	background-image: url('../img/about/about.jpeg');
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -240,6 +240,7 @@ footer{
 @media (min-width: 992px) {
 	.timeline > li {
 		min-height: 150px;
+		
 	}
 	.timeline > li .timeline-panel {
 		padding: 0 20px 20px;
@@ -264,6 +265,7 @@ footer{
 	}
 	.timeline > li .timeline-panel {
 		padding: 0 20px 20px 100px;
+		font-size: 15px;
 	}
 	.timeline > li .timeline-image {
 		width: 170px;
@@ -286,7 +288,6 @@ section h2.section-heading {
 	margin-bottom: 15px;
 }
 section h3.section-subheading {
-	color: #FFF;
 	font-size: 20px;
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: none;
