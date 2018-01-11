@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="<?php echo base_url('ocorrencia') ?>">LOCAIS</a></li>
                             <li><a href="<?php echo base_url('/#sobre') ?>">SOBRE</a></li>
                             <li><a href="<?php echo base_url('/#contato') ?>">CONTATO</a></li>
-                            <li><a href="<?php echo base_url('/usuario/admin') ?>">ADMIN</a></li>
+                            <li><a href="<?php echo base_url('/Admin') ?>">ADMIN</a></li>
                         </ul>
                     </div>
                 </div>

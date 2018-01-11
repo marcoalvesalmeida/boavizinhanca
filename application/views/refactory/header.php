@@ -47,14 +47,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 alert("Ei! Não seja mal, fique com a gente!");
             });
         });
-        /*function menu(){
-            if (document.body.scrollTop > 97) {
-                document.getElementById('menu').style.background = "#222222";
-                document.getElementById('logo').style.fontSize = "21px";
-            } else {
-                document.getElementById('menu').style.background = "transparent";
-                document.getElementById('logo').style.fontSize = "28px";
-            }*/
             $(function(){   
                 var nav = $('#menu'); 
                 $(window).scroll(function () { 
@@ -99,7 +91,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li><a href="<?php echo base_url('ocorrencia') ?>">LOCAIS</a></li>
                             <li><a href="<?php echo base_url('/#about') ?>">SOBRE</a></li>
                             <li><a href="<?php echo base_url('/#contact') ?>">CONTATO</a></li>
-                            <li id="sair"><a href="<?php echo base_url('/usuario/admin') ?>">ADMIN</a></li>
+                            <li id="sair"><a href="<?php echo base_url('/Admin') ?>">ADMIN</a></li>
                         </ul>
                     </div>
                 </div>

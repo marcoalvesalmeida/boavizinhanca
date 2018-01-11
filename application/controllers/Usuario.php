@@ -40,8 +40,8 @@ class Usuario extends CI_Controller {
             $dados['senha']=$this->input->post('senha');
             if($this->usuario->salvar($dados)==1){
                 //Função para redirecionar para a página principal. Deve-se habilitar isso em autoload/helpers(url)
-                $sucesso['sucesso'] = ' Registro salvo no banco de Dados!';
-                $this->load->view('EditarUsuario',$sucesso);
+                $dados['sucesso'] = ' Registro salvo no banco de Dados!';
+                $this->load->view('EditarUsuario',$dados);
             }else{
                 //Essa linha deverá ser retirada por quebrar padrões
                 echo 'Erro ao savar registro!';
@@ -53,9 +53,11 @@ class Usuario extends CI_Controller {
             $this->load->model('Usuario_model','usuario');
             //A linha abaixo pega os dados do form e guarda no array 
             if($this->usuario->remover($id)==1){
-                //Função para redirecionar para a página principal. Deve-se habilitar isso em autoload/helpers(url)
-                $sucesso['sucesso'] = ' Registro removido no banco de Dados!';
-                $this->load->view('EditarUsuario',$sucesso);
+                //Função para redirecionar para a página principal. Deve-se habilitar isso em autoload/helpers(url)              
+                $this->load->model('Usuario_model','usuarios');
+                $dados['resultado']=$this->usuarios->getUsuarios();
+                $dados['sucesso'] = ' Registro removido no banco de Dados!';
+                $this->load->view('admin-views/usuarios',$dados);
             }else{
                 //Essa linha deverá ser retirada por quebrar padrões
                 echo 'Erro ao savar registro!';

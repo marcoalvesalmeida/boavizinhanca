@@ -6,8 +6,13 @@ class Usuario_model extends CI_Model {
 	public function getUsuarios(){
      $query = $this->db->get('admin');
      return $query->result();
- }
- 
+  }
+
+  public function pesquisaFiltro($dados){
+  $query = $this->db->query('SELECT * FROM admin WHERE id="'.$dados['id'].'"');
+  return $query->result();
+
+  } 
  public function salvar($dados=NULL){
     if($dados['id']==NULL){
         $dados['id']='default';

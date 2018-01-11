@@ -64,7 +64,7 @@ $this->load->view("refactory/header");
                                     <h4 class="subheading">Quem Desenvolveu?</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">O projeto elaborado nas disciplinas de Fundamentos de Sistemas da Informação e Programação WEB2. Desenvolvido por Marco Alves de Almeida, aluno do 4º Semestre do Curso de Tecnologia em Análise e Desenvolvimento de Sistemas - IFNMG Câmpus Januária.</p>
+                                    <p class="text-muted">O projeto foi elaborado nas disciplinas de Fundamentos de Sistemas da Informação e Programação WEB2. Desenvolvido por Marco Alves de Almeida, aluno do 4º Semestre do Curso de Tecnologia em Análise e Desenvolvimento de Sistemas - IFNMG Câmpus Januária.</p>
                                 </div>
                             </div>
                         </li>
@@ -84,7 +84,7 @@ $this->load->view("refactory/header");
         <section class="contact">
             <div class="container">
                 <h1 class="text-center" id="contact">Fale conosco:</h1>
-                <form action="" method="POST" class="form-horizontal form-cadastro" id="ajax_form">
+                <form class="form-horizontal form-cadastro" id="ajax_form">
                     <div class="row text-center">
                         <div class="col-md-1 form-line">
                             <label for="nome" class="control-label">Nome:</label>
