@@ -9,58 +9,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/bootstrap.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('bootstrap/css/style.css') ?>"> 
-    <script type="text/javascript" src="<?php echo base_url('bootstrap/js/jquery-3.1.1.min.js');?>"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:600" type="text/css" rel="stylesheet" />
     <link href='<?php echo base_url("bootstrap/css/mapa.css")?>' type="text/css" rel="stylesheet" />
-
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDKHslmsBHG61bJEvzFFrgY4BY3rv-aOW0"></script>
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery.min.js")?>'></script>
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/mapa.js")?>'></script>
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery-ui.custom.min.js")?>'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <script>
         $(document).ready(function(){
             $('#ajax_form').submit(function(){
                 var dados = $(this).serialize();
-
                 $.ajax({
                     type: "POST",
                     url: "<?php echo base_url('mensagem/salvar');?>",
                     data: dados,
-                    success: function( data )
+                    success: function(data)
                     {
-                        alert(data);
+                        $("form").trigger("reset");  
+                          $('#success_message').fadeIn().html("Mensagem enviada com sucesso!");  
+                          setTimeout(function(){  
+                               $('#success_message').fadeOut("Slow");  
+                          }, 3000); 
                     }
                 });
                 return false;
             });
         });
-        $(document).ready(function(){
-            $("#title").mouseenter(function(){
-                $(this).animate({opacity:'0.6' });
-                $(this).css('color','#E2C503')
-            });
-            $("#title").mouseleave(function(){
-                $(this).animate({opacity:'1' });
-                $(this).css('color','#FFF')
-            });
-            $("#sair").mouseleave(function(){
-                alert("Ei! Não seja mal, fique com a gente!");
-            });
-        });
-            $(function(){   
-                var nav = $('#menu'); 
-                $(window).scroll(function () { 
-                    if ($(this).scrollTop() > 250) { 
-                        nav.addClass("menuFixo"); 
-                        nav.addClass("navbar-pages");
-                        nav.addClass("menu-links"); 
-                        $(".menuFixo").css("background-color","transparent");
-                    } else { 
-                        nav.removeClass("menuFixo"); 
-                        nav.removeClass("navbar-pages");
-                    } 
-                });  
-            });
         </script>
         <script type="text/javascript" src="<?php echo base_url('bootstrap/js/bootstrap.js')?>"></script>
         <script src="https://use.fontawesome.com/913fcc4808.js"></script>

@@ -1,14 +1,10 @@
 <?php $this->load->view('admin-views/refactory/admin-header')?>
 <script>
     var cont = 0;
-    function exibeMensagem(mensagem) {
-        alert(mensagem)
-        document.getElementById('mensagem').value="!sss";
-        if(cont%2==0)
-            document.getElementById('mensagem').style.display = "block";
-        else
-            document.getElementById('mensagem').style.display = "none";
-        cont=cont+1;
+    function exibeMensagem(id) {
+        $(function () {            
+            $("#mensagem"+id).dialog();
+        });
     }
     
 </script>
@@ -54,7 +50,7 @@
                 </a>
             </li>
             <li class="active-pro">
-                <a href="#">
+                <a href="<?php echo base_url('LandingPage')?>">
                     <i class="pe-7s-rocket"></i>
                     <p>Ir para o site</p>
                 </a>
@@ -105,23 +101,6 @@
                     <div class="header">
                         <h4 class="title">Todas as mensagens</h4>
                         <p class="category">Veja aqui as mensagens</p>
-                        <button type="btn btn-primary" data-toggle="modal" data-target="#modal-mensagem">Exibir</button>
-                    </div>
-                    <div class="modal fade" id="modal-mensagem">
-                        <div class="modal-dialog">
-                            <div class="modal-content"> 
-                            <div class="modal-header">                                      
-                            <buton type="button" class="close" data-dismiss="modal"><span></span></buton>
-                            <h4 class="modal-title"> Titulo da Mensagem </h4>
-                            </div>
-                            <div class="modal-body">
-                            <p> Conteúdo da Mensagem </p>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal"> Fechar </button>
-                            </div>               
-                            </div>     
-                        </div>                        
                     </div>
                     <div class="content table-responsive table-full-width">
                      <table class="table table-hover table-striped">
@@ -130,6 +109,9 @@
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Assunto</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Remover</th>
                         </thead>
                         <tbody>
                          <?php
@@ -137,12 +119,17 @@
                          foreach ($resultado as $linha) {
                             $id=$linha->id;
                             echo '
-                            <tr onclick="exibeMensagem("'.$linha->mensagem.'")">
+                            <div id="mensagem'.$id.'" title="Contato pelo Site" style="display:none">
+                                <p>'.$linha->mensagem.'</p>
+                            </div>
+                            <tr onclick="exibeMensagem('.$id.')" style="cursor:pointer;">
                               <td>'.$cont++.'</td>
                               <td>'.$linha->nome.'</td>
                               <td>'.$linha->email.'</td>
                               <td>'.$linha->assunto.'</td>
-                              <td> <a href="mensagem/remover/'.$id.'"><i class="icon-trash"></i>Apagar</a></td>
+                              <td>'.date('d/m/Y',strtotime($linha->data_hora)).'</td>
+                              <td>'.date('H:m',strtotime($linha->data_hora)).'</td>
+                              <td> <a href="/boavizinhanca/mensagem/remover/'.$id.'"><i class="icon-trash"></i>Apagar</a></td>
                           </tr>';
                       }?>
                   </tbody>

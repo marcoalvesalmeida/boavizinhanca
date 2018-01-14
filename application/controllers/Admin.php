@@ -5,7 +5,10 @@ class Admin extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('admin-views/dashboard');
+		$this->load->model('Ocorrencia_model', 'ocorrencia');
+        $dados['ocorrencias'] = $this->ocorrencia->tipoCrime();
+        $dados['meses'] = $this->ocorrencia->mesCrime();
+		$this->load->view('admin-views/dashboard',$dados);
 	}
     public function perfil()
 	{

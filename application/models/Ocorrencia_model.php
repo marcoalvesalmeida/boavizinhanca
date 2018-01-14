@@ -32,7 +32,16 @@ class Ocorrencia_model extends CI_Model {
             $bairro=$dados['bairro'];
             $query = $this->db->query('SELECT * FROM ocorrencias WHERE rua="'.$dados['rua'].'" OR bairro="'.$dados['bairro'].'" and tipo="'.$dados['tipo'].'" OR data="'.$dados['data'].'"');
             return $query->result();
-
         }
+    }
+
+    public function tipoCrime(){
+        $query = $this->db->query('SELECT DISTINCT(tipo_crime), count(*) as "qtde" FROM locations GROUP BY tipo_crime');
+        return $query->result();
+    }
+
+    public function mesCrime(){
+        $query = $this->db->query('SELECT distinct(month(data_ocorrencia)) as "mes", year(data_ocorrencia) as "ano", count(month(data_ocorrencia)) as "qtde" from locations group by month(data_ocorrencia) order by year(data_ocorrencia) asc;');
+        return $query->result();
     }
 }

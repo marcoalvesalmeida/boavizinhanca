@@ -4,7 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Mensagem_model extends CI_Model {
 
 	public function getMensagens(){
-           $query = $this->db->get('mensagem');
+            $this->db->from('mensagem');
+            $this->db->order_by("data_hora", "desc");
+           $query = $this->db->get();
            return $query->result();
 	}
         

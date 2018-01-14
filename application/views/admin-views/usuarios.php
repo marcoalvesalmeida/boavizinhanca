@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="#">
+                <a href="<?php echo base_url('LandingPage')?>">
                         <i class="pe-7s-rocket"></i>
                         <p>Ir para o site</p>
                     </a>

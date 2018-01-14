@@ -113,6 +113,7 @@ $this->load->view("refactory/header");
                             <button type="reset" class="btn btn-danger btn-right btn-cadastro-2">Limpar</button>
                         </div>
                     </section>
+                    <span id="success_message" class="col-md-6 col-xs-push-4 alert alert-success" role="alert" style="display:none;"></span>
                 </form>    
             </div>
             <?php

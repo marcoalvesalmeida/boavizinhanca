@@ -5,7 +5,7 @@ class Mensagem extends CI_Controller {
 	public function index($dados=NULL)	{
         $this->load->model('Mensagem_model','mensagens');
         $dados['resultado']=$this->mensagens->getMensagens();
-        $this->load->view('ListarMensagens',$dados);
+        $this->load->view('admin-views/mensagens',$dados);
     }
     public function salvar(){
         $this->load->model('Mensagem_model','mensagens');
@@ -27,11 +27,9 @@ class Mensagem extends CI_Controller {
     public function remover($id){
         $this->load->model('Mensagem_model','mensagens');
         if($this->mensagens->remover($id)==1){
-            $dados['sucesso'] = ' Registro removido no banco de Dados!';
-            $this->index($dados);
+            $this->index();
         }else{
-            $dados['sucesso'] = ' Não foi possível remover o registro!';
-            $this->index($dados);
+            $this->index();
         }
     }
 
