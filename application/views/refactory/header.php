@@ -15,6 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery.min.js")?>'></script>
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/mapa.js")?>'></script>
     <script type="text/javascript" src='<?php echo base_url("bootstrap/js/jquery-ui.custom.min.js")?>'></script>
+     <script src='<?php echo base_url("bootstrap/js/bootstrap.js")?>'></script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
     <script>
         $(document).ready(function(){
@@ -37,7 +38,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             });
         });
         </script>
-        <script type="text/javascript" src="<?php echo base_url('bootstrap/js/bootstrap.js')?>"></script>
         <script src="https://use.fontawesome.com/913fcc4808.js"></script>
     </head>
     <body class="pages">

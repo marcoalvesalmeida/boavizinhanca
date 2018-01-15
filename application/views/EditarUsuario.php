@@ -11,8 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-responsive.css">
 </head>
 <body>
-<div id="container" align="center">
-        <div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse">
           <div class="navbar-inner">
             <div class="container">
                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -34,7 +33,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
           </div>
-        </div>
+
+<div id="container" align="center">
+                </div>
   <h1>Editar Usuário:</h1>
    <?php
     if (isset($sucesso)){
